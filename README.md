@@ -1,34 +1,51 @@
 # Android virtual device setup:
 1. Download Java and paste the bin path from Program files to environment variables
-2. Download Android Studio and install it, and open Android Studio from default or from C:\Program Files\Android\Android Studio\bin\studio64.exe
+
+2. Download Android Studio and install it, and open Android Studio from default or from **C:\Program Files\Android\Android Studio\bin\studio64.exe**
+
 3. This will start downloading and installing the below SDK components
 	1. Android Studio - **C:\Users\<username>\AppData**
-	2. Android SDK - **C:\Users\<username>\AppData\Local\**
+	2. Android SDK **C:\Users\<username>\AppData\Local**
+
 4. Android SDK is required to run Android emulator.
-	1. Provide the path of SDK as ANDROID_HOME in environmental variables
-	2. Provide the below in the in 'PATH' variables
+	1. Provide the path of SDK as **ANDROID_HOME** in environmental variables
+	2. Provide the below in the in **'PATH'** variables
 	*1. path of SDK/tools/bin*
 	*2. path of SDK/tools*
 	*3. path of SDK/platform_tools*
+
 5. Android SDK runs on Java 8, so any upgraded versions are present in the system download and instal JDK8 and update the "path" variable accorindly(java -version)
 	* Run `sdkmanager --list`" from command and it should not throw any class not found error
 	* type `uiautomatorviewer` to check uiautomatorviewer is working properly.
+
 6. Android Studio is required to configure Virtual device/Emulator.  Open Android Studio and click on start new android project
+
 7. you will see the device and the android icon. Click this icon, you will open android virtual device manager. Or open this from Tools > AVD Manager. This will Open the Virtual Device Manager in separate window
+
 8. Click on Create  a new virtual device > Select the device based on model info > Select and download the android version and click on next > Change the device name if needed
+
 9. Now the virtual device is created	
+
 10. If you have Docker for Windows that requires Hyper-V to be enabled. Unfortunately, AVD can’t run with Hyper-V enabled. So to disable Hyper-V, Go to Start > Turn Windows features on or off, Then, disable Hyper-V in your computer. It will ask you to restart your computer. We have to disable VTx from BIOS as well
+
 11. While installing if any issues in Intel HAXM issues, remove it manually from Control Panel > Remove programs and download the standalone version from intel
+
 12. To open the emulator directly from command prompt >  cd <plaform_tools folder path> C:\Users\<username>\AppData\Local\Android\Sdk\platform-tools
 											>emulator -avd <deviceName>  ----- `emulator -avd pixel_2_API_25`
 	
 # Appium Setup:
 1. Download node js and install it. Provide the node js programfiles path in Env variables (cmd > `node --version`, cmd> `npm --version`)
+
 2. We can either download Appium server from npm node modules and start it using command 'appium' from command prompt, or
+
 3. Go to http://appium.io/downloads.html and click “Appium-Desktop for OSX, Windows and Linux” link, click on the setup exe file and download and install it
+
 4. When installation finished, double-click the appium icon (from Desktop 'Appium' as desktop app) and open the appium server
+
 5. Provide the address as 0.0.0.0 and start the Appium server
+
 6. In Eclipse, create a maven project and add libraries related to selenium-java, Appium Java client and configure the project with a test script
+
 7. Add the sample application apk in a folder under the project folder
 
 ## To test in Emulators:
