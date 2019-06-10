@@ -5,13 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import utility.BaseTest;
-import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
+//import utility.BaseTest;
 import static io.appium.java_client.touch.offset.PointOption.point;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
-
-import static io.appium.java_client.touch.offset.ElementOption.element;
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static java.time.Duration.ofSeconds;
 
